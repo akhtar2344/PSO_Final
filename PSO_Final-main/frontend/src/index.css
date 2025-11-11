@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ========================================
+   Table Actions Column - Responsive Styling
+   ======================================== */
+
+/* Prevent table cell overflow */
+.ant-table-cell {
+  overflow: visible;
+}
+
+/* Actions column wrapper - flex container */
+.ant-table-cell [role="rowgroup"] div[style*="display: flex"] {
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Responsive button styling in Actions column */
+@media (min-width: 320px) and (max-width: 400px) {
+  /* Extra small screens - full wrapping */
+  .ant-table-cell [style*="flexWrap"] {
+    gap: 4px;
+  }
+  
+  .ant-table-cell button {
+    min-width: fit-content;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  /* Small screens - flex wrapping as needed */
+  .ant-table-cell [style*="flexWrap"] {
+    gap: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tablet and up - normal spacing */
+  .ant-table-cell [style*="flexWrap"] {
+    gap: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Desktop - comfortable spacing */
+  .ant-table-cell [style*="flexWrap"] {
+    gap: 8px;
+  }
+}
+
+/* Prevent horizontal scrolling on table wrapper */
+.ant-table-wrapper {
+  overflow-x: auto;
+}
+
+.ant-table {
+  table-layout: auto;
+}
+
+/* Ensure buttons maintain height consistency */
+.ant-btn-sm {
+  height: 32px;
+  line-height: 32px;
+}
+
+/* Focus and hover states visibility */
+.ant-btn:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+.ant-btn:hover {
+  z-index: 1;
+}
+
