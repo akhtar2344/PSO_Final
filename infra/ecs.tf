@@ -176,5 +176,5 @@ output "ecs_task_definition_arn" {
 }
 
 output "ecs_service_arn" {
-  value = aws_ecs_service.backend.arn
+  value = aws_ecs_service.backend.id
 }
