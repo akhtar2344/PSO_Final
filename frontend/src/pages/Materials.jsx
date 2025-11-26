@@ -295,8 +295,9 @@ function Materials({ user, onLogout }) {
                   setDivisionFilter(value || '');
                   setPage(1);
                 }}
+                value={divisionFilter || undefined}
               >
-                {divisions.map(div => (
+                {divisions.filter(div => div.id || div._id).map(div => (
                   <Select.Option key={div.id || div._id} value={div.id || div._id}>
                     {div.label}
                   </Select.Option>
@@ -312,8 +313,9 @@ function Materials({ user, onLogout }) {
                   setPlacementFilter(value || '');
                   setPage(1);
                 }}
+                value={placementFilter || undefined}
               >
-                {placements.map(place => (
+                {placements.filter(place => place.id || place._id).map(place => (
                   <Select.Option key={place.id || place._id} value={place.id || place._id}>
                     {place.label}
                   </Select.Option>
